@@ -1,12 +1,21 @@
 import os
-from flask import Flask
+from flask import Flask, render_template, redirect, request, url_for
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
+app.config["MONGO_DBNAME"] = 'beer_tracker'
+app.config["MONGO_URI"] = 'mongodb+srv://root:MongoAtlas20@myfirstcluster.zecjr.mongodb.net/beer_tracker?retryWrites=true&w=majority'
+
+mongo = PyMongo(app)
+
 
 @app.route('/')
-def hello():
-    return 'Wello Horld'
+@app.route('/get_beer')
+def get_beer():
+    return render_template("beers.html", tasks=mongo.db.ratings.find())
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

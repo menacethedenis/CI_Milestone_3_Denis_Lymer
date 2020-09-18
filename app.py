@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'beer_tracker'
-app.config["MONGO_URI"] = 'mongodb+srv://root:MongoAtlas20@myfirstcluster.zecjr.mongodb.net/beer_tracker?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://root:MongoAtlas20@myfirstcluster.zecjr.mongodb.net/beer_tracker?retryWrites=true&w=majority')
 
 mongo = PyMongo(app)
 
@@ -14,7 +14,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_beer')
 def get_beer():
-    return render_template("beers.html", tasks=mongo.db.ratings.find())
+    return render_template("beers.html", ratings=mongo.db.ratings.find())
 
 
 if __name__ == '__main__':

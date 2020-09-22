@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-
+<ul class="collapsible" data-collapsible="accordion">
     {% for beer in ratings %}
-        {{beer.beer_name}}
-        {{beer.brewery_name}}
-        {{beer.beer_rating}}
-        {{beer.beer_comm}}
-        {{beer.drank_date}}
+    <li>
+        <div class="collapsible-header">
+            <div class=" task_header col s9">
+                <p><strong>Beer: </strong>{{beer.beer_name}}  |  <strong>Brewed by: </strong>{{beer.brewery_name}} <br><strong>Drank at: </strong>{{beer.beer_location}}   | <strong>On date: </strong>{{beer.drank_date}}</p>
+                <i class="material-icons">expand_more</i>
+            </div>
+        </div>
+        <div class="collapsible-body">
+            <span>
+                <p><strong><span class="material-icons">comment</span>Comments: </strong>"{{beer.beer_comm}}"</p>
+            </span>
+            <br>
+            <span>
+                <p><strong><span class="material-icons">grade</span>Rating: </strong>{{beer.beer_rating}}/10</p>
+            </span>
+            <br>
+            <span>
+                <p><strong><span class="material-icons">6_ft_apart</span>Social distancing observed: </strong> {{beer.soc_dist}}</p>
+            </span>
+        </div>
+    </li>
     {% endfor %}
-
-    <ul class="collapsible">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-  </ul>
+</ul>
 {% endblock %}

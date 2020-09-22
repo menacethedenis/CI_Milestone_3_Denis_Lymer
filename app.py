@@ -16,6 +16,9 @@ mongo = PyMongo(app)
 def get_beer():
     return render_template("beers.html", ratings=mongo.db.ratings.find())
 
+@app.route('/add_beer')
+def add_beer():
+    return render_template("addbeer.html")
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

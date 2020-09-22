@@ -29,6 +29,13 @@ def insert_beer():
     return redirect(url_for('add_beer'))
     
 
+@app.route('/edit_beer/<beer_id>')
+def edit_beer(beer_id):
+    the_beer = mongo.db.ratings.find_one({"_id": ObjectId(beer_id)})
+    all_ratings = mongo.db.ratings.find()
+    return render_template('editbeer.html', beer = the_beer, ratings = all_ratings)
+    
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
     port=int(os.environ.get('PORT')),

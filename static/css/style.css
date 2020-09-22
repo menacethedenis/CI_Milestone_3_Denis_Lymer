@@ -1,0 +1,17 @@
+/*-----------------------------buttons */
+.btn_beer {
+    height: 25px;
+    width : 62px;
+    line-height: 25px;
+    margin: 5px 5px;
+    padding: 0 0.5em;
+}
+
+#beer_submit {
+    padding-top: 50px;
+}
+
+/*-----------------------------headers */
+.beer_header {
+    margin-left:20px;
+}

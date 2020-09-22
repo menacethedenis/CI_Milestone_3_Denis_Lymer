@@ -32,9 +32,25 @@ def insert_beer():
 @app.route('/edit_beer/<beer_id>')
 def edit_beer(beer_id):
     the_beer = mongo.db.ratings.find_one({"_id": ObjectId(beer_id)})
-    all_ratings = mongo.db.ratings.find()
-    return render_template('editbeer.html', beer = the_beer, ratings = all_ratings)
-    
+    ratings = mongo.db.ratings.find()
+    return render_template('editbeer.html', beer = the_beer, ratings = ratings)
+
+
+@app.route('/update_beer/<beer_id>', methods=['POST'])
+def update_beer(beer_id):
+    ratings = mongo.db.ratings
+    ratings.update({'_id': ObjectId(beer_id)},
+    {
+        'beer_name' : request.form.get('beer_name'),
+        'brewery_name' : request.form.get('brewery_name'),
+        'beer_location' : request.form.get('beer_location'),
+        'drank_date' : request.form.get('drank_date'),
+        'beer_comm' : request.form.get('beer_comm'),
+        'beer_rating' :request.form.get('beer_rating'),
+        'soc_dist' : request.form.get('soc_dist'),
+    })
+    return redirect(url_for('get_beer'))
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

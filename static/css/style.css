@@ -11,7 +11,20 @@
     padding-top: 50px;
 }
 
+.socdist_switch {
+    margin-left:20px;
+}
+
 /*-----------------------------headers */
 .beer_header {
     margin-left:20px;
+}
+
+/*-----------------------------navbar */
+.brand-logo {
+    margin-left:20px;
+}
+
+.beernav {
+    background-color: brown;
 }

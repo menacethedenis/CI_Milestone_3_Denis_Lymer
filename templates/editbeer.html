@@ -2,7 +2,7 @@
 {% block content %}
 <h2>Edit a Beer!</h2>
 <div class="row">
-    <form action="{{url_for('edit_beer', beer_id=beer._id)}}" method="POST" class="col s12">
+    <form action="{{url_for('update_beer', beer_id=beer._id)}}" method="POST" class="col s12">
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">local_drink</i>
@@ -48,14 +48,14 @@
        <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">6_ft_apart</i>
-          <label id="soc_dist" name="soc_dist" class="validate" value="{{beer.soc_dist}}">
+          <label id="soc_dist" name="soc_dist" class="validate" value="{{beer.soc_dist}}"></label>
           <label for="icon_prefix">Social Distancing Observed?</label>
             <div class="switch">
                 <label>
                 {% if beer.soc_dist %}
-                <input id="soc_dist" name="soc_dist"type="checkbox" checked>
+                <input id="soc_distance" name="soc_dist" type="checkbox checked">
                 {% else %}
-                <input id="soc_dist" name="soc_dist"type="checkbox">
+                <input id="soc_distance" name="soc_dist" type="checkbox">
                 {% endif %}
                     No
                     <input type="checkbox">

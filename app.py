@@ -2,11 +2,18 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from os import path
+
+if path.exists('env.py'):
+    import env
+
+
+MONGO_URI = os.environ.get('MONGO_URI')
 
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'beer_tracker'
-app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://root:MongoAtlas20@myfirstcluster.zecjr.mongodb.net/beer_tracker?retryWrites=true&w=majority')
+app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 mongo = PyMongo(app)
 

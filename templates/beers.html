@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="row">
+        <div class="col sm 12">
+            <h1 class="page-header">Welcome to Beer Tracker!</h1>
+        </div>
+</div>
+<div class="row">
+        <div class="col sm 12 btn-col"><a href="{{url_for('add_beer')}}" class="waves-effect waves-light btn add-btn"><i class="material-icons button-icon">playlist_add</i>Add a Beer!</a></div>
+</div>
+<div class="list-wrapper">
 <ul class="collapsible" data-collapsible="accordion">
     {% for beer in ratings %}
     <li>
@@ -35,4 +44,5 @@
     </li>
     {% endfor %}
 </ul>
+</div>
 {% endblock %}

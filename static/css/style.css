@@ -37,6 +37,11 @@ body {
     padding-bottom: 30px;
 }
 
+/*-----------------------------tooltips */
+.tooltipped {
+    background-color: #f00;
+}
+
 /*-----------------------------headers */
 .beer_header {
     margin-left:20px;
@@ -44,7 +49,7 @@ body {
 }
 
 .page-header {
-    text-align: right;
+    text-align: center;
 }
 
 /*-----------------------------navbar */
@@ -94,5 +99,8 @@ footer {
 @media only screen and (max-width: 600px) {
     .footer-image {
         display: none;
+    }
+    .beertip {
+        data-position: right;
     }
 }

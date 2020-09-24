@@ -1,21 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
 <div class="row">
-        <div class="col sm 12">
+        <div class="col s12">
             <h1 class="page-header">Welcome to Beer Tracker!</h1>
         </div>
 </div>
+<div class="row">
+    <div class="col s12 ">
+      <div class="card amber darken-4 z-depth-2">
+        <div class="card-content white-text">
+          <span class="card-title" text-align="center">Lets get started</span>
+          <p>Thank you for choosing Beer Tracker to record your mighty drinking exploits. Add as much or as little information to your entries as you wish, but don't forget to wash your hands and wear a mask when you've finished your drink!</p>
+          <br>
+          <p>Click the green button below to add an entry. Use the buttons on the left of your entries to edit or delete them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 <div class="row btn-row">
-        <div class="col sm 12 btn-col"><a href="{{url_for('add_beer')}}" class="waves-effect waves-light btn add-btn z-depth-2"><i class="material-icons button-icon">playlist_add</i>Add a Beer!</a></div>
+        <div class="col s12 btn-col"><a href="{{url_for('add_beer')}}" class="waves-effect waves-light green accent-4 btn add-btn z-depth-2"><i class="material-icons button-icon">playlist_add</i>Add a Beer!</a></div>
 </div>
+</div>
+
 <div class="list-wrapper z-depth-2">
 <ul class="collapsible" data-collapsible="accordion">
     {% for beer in ratings %}
     <li>
         <div class="collapsible-header coll-head">
         <div class="col s3 ">
-        <a href="{{url_for('edit_beer', beer_id=beer._id)}}" class="waves-effect waves-light btn btn_beer blue z-depth-2 tooltipped" data-position="bottom" data-tooltip="Edit"><i class="material-icons right">edit</i>Edit</a>
-        <a href="{{url_for('delete_beer', beer_id=beer._id)}}" class="waves-effect waves-light btn btn_beer red z-depth-2 tooltipped" data-position="bottom" data-tooltip="Delete"><i class="material-icons right">delete</i>Delete</a>
+        <a href="{{url_for('edit_beer', beer_id=beer._id)}}" class="waves-effect waves-light btn btn_beer blue z-depth-2 tooltipped beertip" data-position="top" data-tooltip="Edit"><i class="material-icons right">edit</i>Edit</a>
+        <a href="{{url_for('delete_beer', beer_id=beer._id)}}" class="waves-effect waves-light btn btn_beer red z-depth-2 tooltipped beertip" data-position="bottom" data-tooltip="Delete"><i class="material-icons right">delete</i>Delete</a>
         </div>
             <div class=" beer_header col s6">
                 <p><strong>Beer: </strong>{{beer.beer_name}}  |  <strong>Brewed by: </strong>{{beer.brewery_name}} <br><strong>Drank at: </strong>{{beer.beer_location}}   | <strong>On date: </strong>{{beer.drank_date}}</p>

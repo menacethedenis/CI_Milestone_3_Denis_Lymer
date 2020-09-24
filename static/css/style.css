@@ -37,6 +37,12 @@ body {
     padding-bottom: 30px;
 }
 
+.btn-add {
+    margin-top: 25px;
+    padding-bottom: 30px;
+    
+}
+
 /*-----------------------------tooltips */
 .tooltipped {
     background-color: #f00;

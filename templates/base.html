@@ -15,8 +15,8 @@
       <a href="{{url_for('get_beer')}}" class="brand-logo">Beer Tracker!</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="{{url_for('get_beer')}}"><i class="material-icons">home</i>Home</a></li>
-        <li><a href="{{url_for('add_beer')}}"><i class="material-icons">playlist_add</i>Add Beer</a></li>
+        <li><a href="{{url_for('get_beer')}}"><i class="material-icons large">home</i>Home</a></li>
+        <li><a href="{{url_for('add_beer')}}"><i class="material-icons large">playlist_add</i>Add Beer</a></li>
       </ul>
       <ul class="sidenav" id="mobile-demo">
         <li><a href="{{url_for('get_beer')}}"><i class="material-icons">home</i>Home</a></li>
@@ -35,6 +35,7 @@
             $('.collapsible').collapsible();
             $('.sidenav').sidenav();
             $('.datepicker').datepicker();
+            $('.tooltipped').tooltip();
         });
     </script>
 </div>

@@ -1,3 +1,8 @@
+/*-----------------------------general */
+body {
+    background-color: #fff8e1;
+}
+
 /*-----------------------------buttons */
 .btn_beer {
     height: 25px;
@@ -23,12 +28,19 @@
     left: 50%;
 }
 
-.btncol{
+.btn-col{
     text-align: center;
+    padding-bottom: 10px;
 }
+
+.btn-row {
+    padding-bottom: 30px;
+}
+
 /*-----------------------------headers */
 .beer_header {
     margin-left:20px;
+    text-align: justify;
 }
 
 .page-header {
@@ -58,9 +70,29 @@
     padding-right:15px;
 }
 
+/*-----------------------------lists */
+.coll-list {
+    background-color: #ffecb3;
+}
+
+.coll-head {
+    background-color: #ffd54f;
+}
+
 /*-----------------------------footer */
 .footer-image {
-    background-image: url('https://lh3.googleusercontent.com/proxy/UQQ4DsFphP_dl4hcwdUwJbxe6Z2TwFktUd7cfHUXQSMbpK0BvYqT01Xq4bpxLCkldg-RZc_rLnIopJOWaUfqdhDRYnNQvyZAQZR99ZBjz8hGMjNuBFLekgM');
-    height: 300px;
-    width:100%
+    background-image: url('https://www.freepngimg.com/thumb/beer/11-2-beer-png-8.png');
+    height: 200px;
+    width:100%;
+}
+
+footer {
+    padding-top: 30px;
+}
+
+/*-----------------------------media queries */
+@media only screen and (max-width: 600px) {
+    .footer-image {
+        display: none;
+    }
 }

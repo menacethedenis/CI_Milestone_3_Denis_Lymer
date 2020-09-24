@@ -48,6 +48,12 @@ body {
     background-color: #f00;
 }
 
+.card-title {
+    text-shadow: 0.5px 0.5px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
 /*-----------------------------headers */
 .beer_header {
     margin-left:20px;
@@ -56,6 +62,7 @@ body {
 
 .page-header {
     text-align: center;
+    text-shadow: 1px 1px;
 }
 
 /*-----------------------------navbar */

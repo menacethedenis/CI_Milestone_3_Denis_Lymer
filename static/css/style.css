@@ -43,11 +43,7 @@ body {
     
 }
 
-/*-----------------------------tooltips */
-.tooltipped {
-    background-color: #f00;
-}
-
+/*-----------------------------cards */
 .card-title {
     text-shadow: 0.5px 0.5px;
     padding-bottom: 10px;
@@ -63,6 +59,7 @@ body {
 .page-header {
     text-align: center;
     text-shadow: 1px 1px;
+    text-decoration-color: #263238;
 }
 
 /*-----------------------------navbar */

@@ -51,15 +51,13 @@
           <label for="icon_prefix" >Social Distancing Observed?</label>
             <div class="switch socdist_switch">
                 <label>
-                {% if beer.soc_dist %}
-                <input id="soc_dist" name="soc_dist" type="checkbox checked">
-                {% else %}
-                <input id="soc_dist" name="soc_dist" type="checkbox">
-                {% endif %}
-                    No
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                    Yes
+                    {% if beer.soc_dist %}
+                        <input id="soc_dist" name="soc_dist" type="checkbox" checked="checked">
+                        No<span class="lever"></span>Yes
+                    {% else %}
+                        <input id="soc_dist" name="soc_dist" type="checkbox">
+                        No<span class="lever"></span>Yes
+                    {% endif %}
                 </label>
             </div>
         </div>

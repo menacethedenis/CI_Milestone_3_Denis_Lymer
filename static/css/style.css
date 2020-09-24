@@ -39,3 +39,10 @@
 .icon_padding {
     padding-right:10px;
 }
+
+/*-----------------------------footer */
+.footer-image {
+    background-image: url('https://lh3.googleusercontent.com/proxy/UQQ4DsFphP_dl4hcwdUwJbxe6Z2TwFktUd7cfHUXQSMbpK0BvYqT01Xq4bpxLCkldg-RZc_rLnIopJOWaUfqdhDRYnNQvyZAQZR99ZBjz8hGMjNuBFLekgM');
+    height: 300px;
+    width:100%
+}

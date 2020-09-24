@@ -23,7 +23,13 @@
             </span>
             <br>
             <span>
-                <p><strong><span class="material-icons">6_ft_apart</span>Social distancing observed: </strong> {{beer.soc_dist}}</p>
+                <p><strong><span class="material-icons">6_ft_apart</span>Social distancing observed: </strong> 
+                {% if beer.soc_dist %}
+                <p id="soc_dist" name="soc_dist">Yes</p>
+                {% else %}
+                <p id="soc_dist" name="soc_dist">No</p>
+                {% endif %}
+                </p>
             </span>
         </div>
     </li>

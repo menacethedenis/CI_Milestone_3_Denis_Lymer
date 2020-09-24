@@ -6,14 +6,14 @@
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">local_drink</i>
-          <input id="beer_name" name="beer_name" type="text" class="validate">
+          <input id="beer_name" name="beer_name" type="text" class="validate beer_input"  height="50px">
           <label for="icon_prefix">Beer Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">add_business</i>
-          <input id="brewery_name" name="brewery_name" type="text" class="validate">
+          <input id="brewery_name" name="brewery_name" type="text" class="validate beer_input">
           <label for="icon_prefix">Brewery Name</label>
         </div>
       </div>
@@ -27,14 +27,14 @@
        <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">date_range</i>
-          <input id="drank_date" name="drank_date" type="text" class="datepicker">
+          <input id="drank_date" name="drank_date" type="text" class="validate datepicker">
           <label for="icon_prefix">On date</label>
         </div>
        </div>
        <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">comment</i>
-          <textarea id="beer_comm" name="beer_comm"  class="materialize-textarea" maxlength="300"></textarea>
+          <textarea id="beer_comm" name="beer_comm"  class="validate materialize-textarea" maxlength="300"></textarea>
           <label for="icon_prefix">Comments</label>
         </div>
        </div>
@@ -48,12 +48,11 @@
        <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">6_ft_apart</i>
-          <label id="soc_dist" name="soc_dist" class="validate"></label>
+          <label for="icon_prefix">Social Distancing Observed?</label>
         </div>
-        <label for="icon_prefix">Social Distancing Observed?</label>
-            <div class="switch socdist_switch">
-                <label>No<input type="checkbox"><span class="lever"></span>Yes</label>
-            </div>
+       </div>
+       <div class="switch socdist_switch">
+            <label>No<input type="checkbox" id="soc_dist" name="soc_dist" class="validate"><span class="lever"></span>Yes</label>
        </div>
        <div class="row">
         <div class="container col sm 12" id="beer_submit">

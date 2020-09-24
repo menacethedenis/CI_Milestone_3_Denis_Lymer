@@ -27,14 +27,14 @@
        <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">date_range</i>
-          <input id="drank_date" name="drank_date" type="text" class="datepicker">
+          <input id="drank_date" name="drank_date" type="text" class="datepicker validate" value="{{beer.drank_date}}">
           <label for="icon_prefix">On date</label>
         </div>
        </div>
        <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">comment</i>
-          <textarea id="beer_comm" name="beer_comm"  class="materialize-textarea" maxlength="300" value="{{beer.beer_comm}}"></textarea>
+          <input id="beer_comm" name="beer_comm"  type="text" class="validate materialize-textarea" maxlength="300" value="{{beer.beer_comm}}">
           <label for="icon_prefix">Comments</label>
         </div>
        </div>
@@ -48,14 +48,13 @@
        <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">6_ft_apart</i>
-          <label id="soc_dist" name="soc_dist" class="validate" value="{{beer.soc_dist}}"></label>
-          <label for="icon_prefix">Social Distancing Observed?</label>
-            <div class="switch">
+          <label for="icon_prefix" >Social Distancing Observed?</label>
+            <div class="switch socdist_switch">
                 <label>
                 {% if beer.soc_dist %}
-                <input id="soc_distance" name="soc_dist" type="checkbox checked">
+                <input id="soc_dist" name="soc_dist" type="checkbox checked">
                 {% else %}
-                <input id="soc_distance" name="soc_dist" type="checkbox">
+                <input id="soc_dist" name="soc_dist" type="checkbox">
                 {% endif %}
                     No
                     <input type="checkbox">

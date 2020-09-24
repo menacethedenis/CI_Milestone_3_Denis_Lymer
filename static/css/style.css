@@ -12,7 +12,8 @@
 }
 
 .socdist_switch {
-    margin-left:20px;
+    margin-left:15px;
+    margin-top:3em;
 }
 
 /*-----------------------------headers */
@@ -27,4 +28,8 @@
 
 .beernav {
     background-color: brown;
+}
+
+.beer_input {
+    height: 100%;
 }

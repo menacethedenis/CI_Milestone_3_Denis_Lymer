@@ -30,6 +30,12 @@
     background-color: brown;
 }
 
+/*-----------------------------input fields */
 .beer_input {
     height: 100%;
+}
+
+/*-----------------------------icons */
+.icon_padding {
+    padding-right:10px;
 }

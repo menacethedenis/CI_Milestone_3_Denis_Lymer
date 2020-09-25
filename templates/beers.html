@@ -52,35 +52,35 @@
                 </div>
 			</div>
 			<div class="collapsible-body coll-list">
-				<span>
-                <p><strong><span class="material-icons icon_padding flow-text">place</span>Drank At:
-				</strong>{{beer.beer_location}}</p>
-				</span>
-                <br>
-                <span>
-                <p><strong><span class="material-icons icon_padding flow-text">date_range</span>On Date:
-				</strong>{{beer.drank_date}}</p>
-				</span>
-                <br>
-                <span>
-                <p><strong><span class="material-icons icon_padding flow-text">comment</span>Comments:
-				</strong>"{{beer.beer_comm}}"</p>
-				</span>
-				<br>
-				<span>
-                <p><strong><span class="material-icons icon_padding">grade</span>Rating: </strong>{{beer.beer_rating}}/10
+				<p>
+                <span><strong><span class="material-icons icon_padding flow-text">place</span>Drank At:
+				</strong>{{beer.beer_location}}</span>
 				</p>
-				</span>
+                <br>
+                <p>
+                <span><strong><span class="material-icons icon_padding flow-text">date_range</span>On Date:
+				</strong>{{beer.drank_date}}</span>
+				</p>
+                <br>
+                <p>
+                <span><strong><span class="material-icons icon_padding flow-text">comment</span>Comments:
+				</strong>"{{beer.beer_comm}}"</span>
+				</p>
 				<br>
-				<span>
-                <p><strong><span class="material-icons icon_padding">6_ft_apart</span>Social distancing observed: </strong>
+				<p>
+                <span><strong><span class="material-icons icon_padding">grade</span>Rating: </strong>{{beer.beer_rating}}/10
+				</span>
+				</p>
+				<br>
+				<p>
+                <span><strong><span class="material-icons icon_padding">6_ft_apart</span>Social distancing observed: </strong>
 				{% if beer.soc_dist %}
 				<span id="soc_dist" name="soc_dist">Yes</span>
 				{% else %}
 				<span id="soc_dist" name="soc_dist">No</span>
 				{% endif %}
-				</p>
 				</span>
+				</p>
 			</div>
 		</li>
 		{% endfor %}

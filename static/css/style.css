@@ -52,8 +52,8 @@ body {
 
 /*-----------------------------headers */
 .beer_header {
-    margin-left:20px;
-    text-align: justify;
+    margin-left:2em;
+    text-align: left;
 }
 
 .page-header {
@@ -83,6 +83,10 @@ body {
 
 .button-icon {
     padding-right:15px;
+}
+
+.button-pulse {
+    text-align:center;
 }
 
 /*-----------------------------lists */

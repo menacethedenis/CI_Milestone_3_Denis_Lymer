@@ -3,7 +3,9 @@ For my Milestone 3 project I decided to create an app I would find useful myself
 I enjoy craft beer and thought a clean, streamlined app that allowed a user to record and edit relevant details 
 about the beers they have tried would be useful. Obviously such apps already exist, I have tried some of them,
 but I always found them too over-complicated, especially if you've sampled a few beers in one sitting...
-so I settled on developing a very user-friendly app that was easy to use and navigate.
+so I settled on developing a very user-friendly app that was easy to use and navigate. 
+I was impressed by the Materialize framework used in the Code Institute tutorials from this module,
+particularly the responsiveness, so I decided to use it in my own project to gain experience using it.
 
 ## Link to the website
 
@@ -15,22 +17,22 @@ https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer
 
 # UX
 
-I wanted to create a website that would prove useful for anyone looking to view ratings for movies and tv shows and display them in a streamlined, no-nonsense layout. 
-'Keep it simple' was the mantra I kept repeating to myself and I tried to keep every feature just one-click away.
+Ease of use was the main goal of this project. I wanted to keep the CRUD functionality within as few clicks
+as possible. I also decided to keep the layout to 3 seperate pages - Home/main, Add and Edit,
+and make navigation between them as simple and obvious as possible.
 
 ### **User Stories**
 
-Bearing in mind the features of other sites which frustrated me when using them, I created the following user stories:
-* As a user I want to be able to easily access movie review scores.
-* As a user I want an easy to use site providing a streamlined experience, the opposite of what more established sites provide.
-* As a user I want to be able to search for my movie with no difficulty and see results instantly.
-* As a user if I search for something that may have multiple results (such as 'Star Wars') than all relevant results should be displayed.
-* As a user I would like to discuss the movies I like or dislike with other users.
+I wrote the following user stories to keep in mind during development:
+* As a user I want to be able to easily record details about beers I am drinking or have drank previously.
+* As a user I want a streamlined app experience with no features more than one click away.
+* As a user I want to be able to edit or delete previous entries.
+* As a user I want to be able to record an entry with the minimal amount of info if I am in a rush.
 
 ### **Wire frames**
 
 I again used the Balsamiq desktop app to create my wireframes to use as reference points for the app.
-I focused on mobile first design, then tablet sizing and then desktop layout.
+I focused on mobile first design, then tablet and finally desktop layout.
 
 <details>
 <summary>Mobile - Main Page</summary>
@@ -150,12 +152,6 @@ HTML5 was used for the general structuring and positioning on the website.
 
 ## CSS3 - https://www.w3.org/Style/CSS/Overview.en.html
 CSS3 was used to style the website.
-
-## Bootswatch - https://bootswatch.com/
-Bootswatch offer free Bootstrap templates. I used the Solar template to base my HTML and CSS stylings and layout on: https://bootswatch.com/solar/
-
-## Bootstrap - https://www.bootstrapcdn.com/
-Bootstrap v4.3.1 was used via Bootswatch template for mobile-first design and responsiveness, styling, grid layouts and navigation.
 
 ## JQuery - https://jquery.com/
 JQuery was used to deploy javascript functionality with bootstrap/bootswatch.

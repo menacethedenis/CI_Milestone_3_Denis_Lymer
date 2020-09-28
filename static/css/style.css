@@ -59,6 +59,7 @@ body {
 .page-header {
     text-align: center;
     text-shadow: 1px 1px;
+    -webkit-text-decoration-color: #263238;
     text-decoration-color: #263238;
 }
 
@@ -120,6 +121,9 @@ footer {
     nav .brand-logo {
         font-size: 1.25rem;
     }
+    webkit-nav .brand-logo {
+        font-size: 1.25rem;
+    }
 }
 
 @media only screen and (max-width: 290px) {
@@ -130,6 +134,10 @@ footer {
         display:none;
     }
     nav .brand-logo {
+        font-size: 10px;
+        color:#263238;
+    }
+    webkit-nav .brand-logo {
         font-size: 10px;
         color:#263238;
     }

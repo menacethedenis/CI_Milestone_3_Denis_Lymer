@@ -121,10 +121,12 @@ footer {
     nav .brand-logo {
         font-size: 1.25rem;
         margin-left: 0;
+        left:100px;
     }
     webkit-nav .brand-logo {
         font-size: 1.25rem;
         margin-left: 0;
+        left: 100px;
     }
 }
 
@@ -139,10 +141,12 @@ footer {
         font-size: 10px;
         color:#263238;
         margin-left: 0;
+        left:100px;
     }
     webkit-nav .brand-logo {
         font-size: 10px;
         color:#263238;
         margin-left: 0;
+        left:100px;
     }
 }

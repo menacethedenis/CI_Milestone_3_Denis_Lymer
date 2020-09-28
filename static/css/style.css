@@ -119,12 +119,12 @@ footer {
 
 @media only screen and (max-width: 355px) {
     nav .brand-logo {
-        font-size: 1.25rem;
+        font-size: 1.25rem !important;
         margin-left: 0;
         left:100px;
     }
     webkit-nav .brand-logo {
-        font-size: 1.25rem;
+        font-size: 1.25rem !important;
         margin-left: 0;
         left: 100px;
     }
@@ -138,13 +138,13 @@ footer {
         display:none;
     }
     nav .brand-logo {
-        font-size: 10px;
+        font-size: 10px !important;
         color:#263238;
         margin-left: 0;
         left:100px;
     }
     webkit-nav .brand-logo {
-        font-size: 10px;
+        font-size: 10px !important;
         color:#263238;
         margin-left: 0;
         left:100px;

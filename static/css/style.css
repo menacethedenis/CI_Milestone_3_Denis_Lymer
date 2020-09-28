@@ -120,11 +120,11 @@ footer {
 @media only screen and (max-width: 355px) {
     nav .brand-logo {
         font-size: 1.25rem !important;
-        display: block;
+        display: block !important;
     }
     webkit-nav .brand-logo {
         font-size: 1.25rem !important;
-        display: block;
+        display: block !important;
     }
 }
 
@@ -138,11 +138,11 @@ footer {
     nav .brand-logo {
         font-size: 10px !important;
         color:#263238;
-        display: block;
+        display: block !important;
     }
     webkit-nav .brand-logo {
         font-size: 10px !important;
         color:#263238;
-        display: block;
+        display: block !important;
     }
 }

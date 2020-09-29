@@ -141,15 +141,21 @@ The links have a hover-over effect applied. They collapse into a hamburger butto
 
 </details> 
 
-* Feature 5: 'Add a beer' button <details><p>This is a Materialize card with some depth and shading effects applied. It has a short welcome message and instructions on how to use the app.</p>
+* Feature 5: 'Add a beer' button <details><p>This is a Materialize button with a pulse effect, tooltip and icon applied. As this button represents the core and main function of the app, I wanted it to be prominently positioned, to really stand out and to have its function easily identifiable by a user.</p>
 <br>
-![welcome](https://user-images.githubusercontent.com/48594804/94609993-80411c00-0297-11eb-8334-b49e64ca9364.PNG)
+![addbutton](https://user-images.githubusercontent.com/48594804/94610761-afa45880-0298-11eb-86a5-a9c4fcacaf20.gif)
 
 </details> 
 
-* Feature 6: Lower page Image - The frustrated/scared woman repeating image only appears on large screens. CSS media queries were used to remove it on tablet and mobile screen sizes.
+* Feature 6: List of entries <details><p>This is a Materialize list to display each entry as they are added by a user. The list items display the 'Beer' and 'Brewed by' data fields prominently. There is a collapsible body triggered by the arrow button to reveal the rest of the data fields per entry.
+<br>These are 'Drank at' - to record the users location. 'On Date', 'Comments', 'Rating' and to acknowledge the times we are currently living in, I thought it would be a cool feature to add a field signifying if the location the user was drinking in was practising social distancing. I opted for a switch on the 'add' and 'edit' pages which proved quite tricky to code in terms of writing and reading to the database and getting it displayed properly on the app after writing and/or editing but I think it was worth the effort.
+<br> There are also 'Edit' and 'Delete' buttons to the left of every entry. These along with the arrow button have Materialize logos and tooltips denoting their functionality.</p>
+<br>
+![list](https://user-images.githubusercontent.com/48594804/94612336-e11e2380-029a-11eb-907e-a49cd4139b12.PNG)
 
-### **Details page**
+</details>
+
+### **Add a Beer page**
 
 * Feature 7: Detailed results - When a user clicks the 'Details' button under the search results the site navigates to a new page. Here a user can view details about the movie such as title and poster image. Rating, Tagline, Genre, Release Date and Runtime.
 * Feature 8: Plot - The movie plot is displayed beneath the detailed results.

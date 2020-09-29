@@ -18,7 +18,7 @@ https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer
 # UX
 
 Ease of use was the main goal of this project. I wanted to keep the CRUD functionality within as few clicks
-as possible. I also decided to keep the layout to 3 seperate pages - Home/main, Add and Edit,
+as possible. I also decided to keep the layout to 3 separate pages - Home/main, Add and Edit,
 and make navigation between them as simple and obvious as possible.
 
 ### **User Stories**
@@ -110,14 +110,43 @@ I focused on mobile first design, then tablet and finally desktop layout.
 
 ### **General**
 
-* Feature 1: Navbar: In keeping with my 'one-click away' philosophy for this site, I decided to leave the Navbar links open and visible across all screen sizes.
-* Feature 2: Footer: The footer has working links to social media sites on the right and to the About page on the left. The icons are from Font-Awesome.
-* Feature 3: Theme: I used a bootstrap template from bootswatch.com to kickstart my css and layouts.
+* Feature 1: Navbar <details><p>The Logo and links to the 'add beer' and 'home pages' are visible on larger and tablet size screens. 
+The links have a hover-over effect applied. They collapse into a hamburger button and switch from right to left of the screen on mobile devices. The nav pops in from the left of the screen when the hamburger is clicked.</p>
+<br>
+![navbar](https://user-images.githubusercontent.com/48594804/94607282-9ea51880-0293-11eb-9be0-18c8d0530999.png)
+<br>
+![navbar2](https://user-images.githubusercontent.com/48594804/94608379-4111cb80-0295-11eb-993e-4e7e2914f36e.PNG)
+<br>
+![navbar3](https://user-images.githubusercontent.com/48594804/94608380-41aa6200-0295-11eb-8f64-f8aea2f91ee6.PNG)
 
-### **Home page**
+</details>
 
-* Feature 4: Search bar - The home page prominently displays a brief message detailing the site's purpose and a large search bar with a search prompt. This should instantly let the user know what the site is for.
-* Feature 5: Results - Using Javascript the search function connnects to the TMDB API and pulls back results to the browser window. The user can see the movie or tv show's poster, name and a button underneath labelled 'Details'.
+* Feature 2: Footer <details><p>The footer has an image of glasses containing beer which repeats to fill the screen on larger and tablet sizes. It disappears on mobile screens via CSS media queries. The image is copyright free and sourced from google images.</p>
+<br>
+![footer1](https://user-images.githubusercontent.com/48594804/94608885-f9d80a80-0295-11eb-9c23-c183084dc0a2.PNG)
+
+</details> 
+
+* Feature 3: Colour scheme / Design <details><p>To kickstart the overall design and layout of the site I used Materialize. It has very nice, professional looking layouts and colours. I picked the colours from the palette viewable on their website and chose beer themed hues like browns, yellows and oranges. i also made use of the Materialize buttons, effects and depth/shading effects</p>
+<br>
+![colourscheme](https://user-images.githubusercontent.com/48594804/94609319-81257e00-0296-11eb-8e4a-9192cb8599a0.PNG)
+
+</details> 
+
+### **Home/Main page**
+
+* Feature 4: Welcome card <details><p>This is a Materialize card with some depth and shading effects applied. It has a short welcome message and instructions on how to use the app.</p>
+<br>
+![welcome](https://user-images.githubusercontent.com/48594804/94609993-80411c00-0297-11eb-8334-b49e64ca9364.PNG)
+
+</details> 
+
+* Feature 5: 'Add a beer' button <details><p>This is a Materialize card with some depth and shading effects applied. It has a short welcome message and instructions on how to use the app.</p>
+<br>
+![welcome](https://user-images.githubusercontent.com/48594804/94609993-80411c00-0297-11eb-8334-b49e64ca9364.PNG)
+
+</details> 
+
 * Feature 6: Lower page Image - The frustrated/scared woman repeating image only appears on large screens. CSS media queries were used to remove it on tablet and mobile screen sizes.
 
 ### **Details page**

@@ -144,11 +144,8 @@ I focused on mobile first design, then tablet and finally desktop layout.
 
 * Feature 1: Navbar <details><p>The Logo and links to the 'add beer' and 'home pages' are visible on larger and tablet size screens. 
 The links have a hover-over effect applied. They collapse into a hamburger button and switch from right to left of the screen on mobile devices. The nav pops in from the left of the screen when the hamburger is clicked.</p>
-<br>
 ![navbar](https://user-images.githubusercontent.com/48594804/94607282-9ea51880-0293-11eb-9be0-18c8d0530999.png)
-<br>
 ![navbar2](https://user-images.githubusercontent.com/48594804/94608379-4111cb80-0295-11eb-993e-4e7e2914f36e.PNG)
-<br>
 ![navbar3](https://user-images.githubusercontent.com/48594804/94608380-41aa6200-0295-11eb-8f64-f8aea2f91ee6.PNG)
 </details>
 

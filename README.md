@@ -56,10 +56,10 @@ and make navigation between them as simple and obvious as possible.
 ### **User Stories**
 
 I wrote the following user stories to keep in mind during development:
-* As a user I want to be able to easily record details about beers I am drinking or have drank previously.
-* As a user I want a streamlined app experience with no features more than one click away.
-* As a user I want to be able to edit or delete previous entries.
-* As a user I want to be able to record an entry with the minimal amount of info if I am in a rush.
+* 1. As a user I want to be able to easily record details about beers I am drinking or have drank previously.
+* 2. As a user I want a streamlined app experience with no features more than one click away.
+* 3. As a user I want to be able to edit or delete previous entries.
+* 4. As a user I want to be able to record an entry with the minimal amount of info if I am in a rush.
 
 ### **Wire frames**
 
@@ -150,7 +150,6 @@ The links have a hover-over effect applied. They collapse into a hamburger butto
 ![navbar2](https://user-images.githubusercontent.com/48594804/94608379-4111cb80-0295-11eb-993e-4e7e2914f36e.PNG)
 <br>
 ![navbar3](https://user-images.githubusercontent.com/48594804/94608380-41aa6200-0295-11eb-8f64-f8aea2f91ee6.PNG)
-
 </details>
 
 * Feature 2: Footer <details><p>The footer has an image of glasses containing beer which repeats to fill the screen on larger and tablet sizes. It disappears on mobile screens via CSS media queries. The image is copyright free and sourced from google images.</p>
@@ -173,7 +172,7 @@ The links have a hover-over effect applied. They collapse into a hamburger butto
 
 </details> 
 
-* Feature 5: 'Add a beer' button <details><p>This is a Materialize button with a pulse effect, tooltip and icon applied. As this button represents the core and main function of the app, I wanted it to be prominently positioned, to really stand out and to have its function easily identifiable by a user.</p>
+* Feature 5: 'Add a beer' button <details><p>This is a Materialize button with a pulse effect, tooltip and icon applied. As this button represents the core and main function of the app, I wanted it to be prominently positioned, to really stand out and to have its function easily identifiable by a user, fulfilling User Story 1.</p>
 <br>
 ![addbutton](https://user-images.githubusercontent.com/48594804/94610761-afa45880-0298-11eb-86a5-a9c4fcacaf20.gif)
 
@@ -181,7 +180,7 @@ The links have a hover-over effect applied. They collapse into a hamburger butto
 
 * Feature 6: List of entries <details><p>This is a Materialize list to display each entry as they are added by a user. The list items display the 'Beer' and 'Brewed by' data fields prominently. There is a collapsible body triggered by the arrow button to reveal the rest of the data fields per entry.
 <br>These are 'Drank at' - to record the users location. 'On Date', 'Comments', 'Rating' and to acknowledge the times we are currently living in, I thought it would be a cool feature to add a 'Social Distancing Observed?' field signifying if the location the user was drinking in was practising social distancing. I opted for a switch on the 'add' and 'edit' pages which proved quite tricky to code in terms of writing and reading to the database and getting it displayed properly on the app after writing and/or editing but I think it was worth the effort.
-<br> There are also 'Edit' and 'Delete' buttons to the left of every entry. These along with the arrow button have Materialize logos and tooltips denoting their functionality.</p>
+<br> There are also 'Edit' and 'Delete' buttons to the left of every entry fulfilling User Story 3. These along with the arrow button have Materialize logos and tooltips denoting their functionality, fulfilling User Story 2.</p>
 <br>
 ![list](https://user-images.githubusercontent.com/48594804/94612336-e11e2380-029a-11eb-907e-a49cd4139b12.PNG)
 
@@ -195,7 +194,7 @@ The links have a hover-over effect applied. They collapse into a hamburger butto
 
 </details>
 
-* Feature 8: Add a beer entry form <details><p>This is a Materialize form with seven fields for data entry. The first field is for the 'Beer Name'. It is a text field with a max character length of 100. I made it mandatory so as to make it impossible for a user to save a completely blank entry. I left the other fields as optional as I figured that in some situations, a user may only want to record minimal data and go back and fill in more later.</p>
+* Feature 8: Add a beer entry form <details><p>This is a Materialize form with seven fields for data entry. The first field is for the 'Beer Name'. It is a text field with a max character length of 100. I made it mandatory so as to make it impossible for a user to save a completely blank entry. I left the other fields as optional as I figured that in some situations, a user may only want to record minimal data and go back and fill in more later. This fulfills User Story 4.</p>
 <br><p>'Brewery Name' and 'Drank at' are also text fields of max length 100. 'On Date' triggers the Materialize Datepicker which keeps all date entries uniform. 'Comments' is a text area with max length of 300 characters. Rating is a number field with a minimun value of zero and maximum value of 10. There are also increment and decrement arrows on the right of the field.</p>
 <br><p>Lastly is the switch for 'Social Distancing Observed'. As I mentioned earlier this was difficut to get right but I am happy with it and I believe it gives the app some current relevancy. At the bottom of the form is the submit button (titled 'Beer Me!') which when clicked, writes the data to the MongoDB Atlas database I set up. It also returns the user to the main page where their entry will be available to view.</p>
 <br>

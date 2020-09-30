@@ -1,4 +1,6 @@
-# Denis Lymer Milestone Project 3 - CRUD app - 'Beer Tracker'
+# **Denis Lymer Milestone Project 3**
+## **Code Institute - Data Centric Development Module**
+### **CRUD app - 'Beer Tracker'**
 For my Milestone 3 project I decided to create an app I would find useful myself.
 I enjoy craft beer and thought a clean, streamlined app that allowed a user to record and edit relevant details 
 about the beers they have tried would be useful. Obviously such apps already exist, I have tried some of them,
@@ -7,15 +9,45 @@ so I settled on developing a very user-friendly app that was easy to use and nav
 I was impressed by the Materialize framework used in the Code Institute tutorials from this module,
 particularly the responsiveness, so I decided to use it in my own project to gain experience using it.
 
-## Link to the website
+## **Link to the website**
 
 https://beer-tracker-ci-ms3.herokuapp.com/
 
-## Link to the github repository
+## **Link to the github repository**
 
 https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer
 
-# UX
+## **Table of Contents**
+1. [**UX**](#ux)
+    - [**User Stories**](#user-stories)
+    - [**Wire Frames**](#wire-frames)
+
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**General**](#general)
+    - [**Main page**](#main-page)
+    - [**Add a beer page**](#add-a-beer-page)
+    - [**Edit a beer page**](#edit-a-beer-page)
+    - [**Delete an Entry**](#delete-an-entry)
+    - [**Features Left to Implement**](#features-left-to-implement)
+
+3. [**Database**](#database)
+
+4. [**Testing**](#testing)
+
+5. [**Known Bugs**](#known-bugs)
+
+6. [**Technologies Used**](#technologies-used)
+
+7. [**Deployment**](#deployment)
+    - [**Heroku Deployment**](#heroku-deployment)
+    - [**Local Deployment**](#local-deployment)
+
+8. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Acknowledgements**](#acknowledgements)
+
+# **UX**
 
 Ease of use was the main goal of this project. I wanted to keep the CRUD functionality within as few clicks
 as possible. I also decided to keep the layout to 3 separate pages - Home/main, Add and Edit,
@@ -104,9 +136,9 @@ I focused on mobile first design, then tablet and finally desktop layout.
 
 </details>
 
-# Features
+# **Features**
 
-## Existing Features
+## **Existing Features**
 
 ### **General**
 
@@ -133,7 +165,7 @@ The links have a hover-over effect applied. They collapse into a hamburger butto
 
 </details> 
 
-### **Home/Main page**
+### **Main page**
 
 * Feature 4: Welcome card <details><p>This is a Materialize card with some depth and shading effects applied. It has a short welcome message and instructions on how to use the app.</p>
 <br>
@@ -148,7 +180,7 @@ The links have a hover-over effect applied. They collapse into a hamburger butto
 </details> 
 
 * Feature 6: List of entries <details><p>This is a Materialize list to display each entry as they are added by a user. The list items display the 'Beer' and 'Brewed by' data fields prominently. There is a collapsible body triggered by the arrow button to reveal the rest of the data fields per entry.
-<br>These are 'Drank at' - to record the users location. 'On Date', 'Comments', 'Rating' and to acknowledge the times we are currently living in, I thought it would be a cool feature to add a field signifying if the location the user was drinking in was practising social distancing. I opted for a switch on the 'add' and 'edit' pages which proved quite tricky to code in terms of writing and reading to the database and getting it displayed properly on the app after writing and/or editing but I think it was worth the effort.
+<br>These are 'Drank at' - to record the users location. 'On Date', 'Comments', 'Rating' and to acknowledge the times we are currently living in, I thought it would be a cool feature to add a 'Social Distancing Observed?' field signifying if the location the user was drinking in was practising social distancing. I opted for a switch on the 'add' and 'edit' pages which proved quite tricky to code in terms of writing and reading to the database and getting it displayed properly on the app after writing and/or editing but I think it was worth the effort.
 <br> There are also 'Edit' and 'Delete' buttons to the left of every entry. These along with the arrow button have Materialize logos and tooltips denoting their functionality.</p>
 <br>
 ![list](https://user-images.githubusercontent.com/48594804/94612336-e11e2380-029a-11eb-907e-a49cd4139b12.PNG)
@@ -157,108 +189,184 @@ The links have a hover-over effect applied. They collapse into a hamburger butto
 
 ### **Add a Beer page**
 
-* Feature 7: Detailed results - When a user clicks the 'Details' button under the search results the site navigates to a new page. Here a user can view details about the movie such as title and poster image. Rating, Tagline, Genre, Release Date and Runtime.
-* Feature 8: Plot - The movie plot is displayed beneath the detailed results.
-* Feature 9: View ImDB button - This button links to the ImDB page for the selected movie. This function is included in lieu of having to pay for API access.
-* Feature 10: Go back - The user can return to the search/main page here if they are not happy with the result or want to check for something else.
-* Feature 11: Disqus app - At the bottom of the page a fully functional Disqus app is embedded. This allows users to login and caht to other users about the particular movie.
+* Feature 7: Home/Back button <details><p>This is a Materialize button that will return a user to the main page, I positioned it prominently in case they navigated here by mistake.</p>
+<br>
+![addbuttonback](https://user-images.githubusercontent.com/48594804/94620760-087aed80-02a7-11eb-93c8-3743f2a1b678.PNG)
 
-### **About page**
+</details>
 
-* Feature 12: About section - This contains a brief mission statement. There is a link to the Forum page in the text. There is also a copyright-free placeholder image in lieu of a proper website logo. This only appears on large screens. It does not display on tablet or mobile sizes, the mission statment is centred instead.
-* Feature 13: Footer - The link to About that appears on other pages footers is changed to allow the user to navigate back to the search/home page instead.
+* Feature 8: Add a beer entry form <details><p>This is a Materialize form with seven fields for data entry. The first field is for the 'Beer Name'. It is a text field with a max character length of 100. I made it mandatory so as to make it impossible for a user to save a completely blank entry. I left the other fields as optional as I figured that in some situations, a user may only want to record minimal data and go back and fill in more later.</p>
+<br><p>'Brewery Name' and 'Drank at' are also text fields of max length 100. 'On Date' triggers the Materialize Datepicker which keeps all date entries uniform. 'Comments' is a text area with max length of 300 characters. Rating is a number field with a minimun value of zero and maximum value of 10. There are also increment and decrement arrows on the right of the field.</p>
+<br><p>Lastly is the switch for 'Social Distancing Observed'. As I mentioned earlier this was difficut to get right but I am happy with it and I believe it gives the app some current relevancy. At the bottom of the form is the submit button (titled 'Beer Me!') which when clicked, writes the data to the MongoDB Atlas database I set up. It also returns the user to the main page where their entry will be available to view.</p>
+<br>
+![addform](https://user-images.githubusercontent.com/48594804/94621087-9a82f600-02a7-11eb-8503-569a87c3191e.PNG)
 
-### **Forum page**
+</details>
 
-* Feature 14: Disqus app - This page is dedicated to the Disqus app so users can chat to each other outside of search results. There is a brief disclaimer displayed at the top of the page.
+### **Edit a beer page**
+* Feature 9: Edit a beer entry form <details><p>This page is identical to the Add a beer page in terms of layout and structure. It is accessed by clicking the 'Edit' button beside an entry on the mainpage. Then it pulls the relevant data from the MongoDB Atlas database and displays them in the correct fields. All fields are fully editable and changes are commited to the database by clicking the 'Confirm Edit' button. This also returns the use to the mainpage so they can view their edited entry.</p>
+<br>
+![edit](https://user-images.githubusercontent.com/48594804/94622716-960c0c80-02aa-11eb-9435-5da24563af50.PNG)
+
+</details>
+
+### **Delete an entry**
+* Feature 10: Delete an Entry <details><p>The delete function is available beside every entry on the main page. Once clicked it removes all data related to the entry from the MongoDB Atlas database and removes the entry from view on the app.</p>
+<br>
+![delete](https://user-images.githubusercontent.com/48594804/94623138-70333780-02ab-11eb-92da-6d467a173417.png)
+
+</details>
+
+## **Features Left to Implement**
+
+* I would like to add a search page/functionality so a user can browse their entries if their lists get very long.
+
+* It might be useful to add beer style categories for larger lists, so they can be sorted more easily.
+
+* Adding API functionality that connects the user to larger beer databases so they can compare their reviews would be a great feature. At the moment I cannot find a reliable one that does not charge a fee for usage.
+
+# **Database**
+I wired my app up to a MongoDB Atlas database. I created 2 collections but ended up using only 1 - Ratings.
+
+<details><summary>Database Screenshot</summary>
+
+![database](https://user-images.githubusercontent.com/48594804/94627405-572f8400-02b5-11eb-92d5-af7e10dc0df9.PNG)
+</details>
+
+# **Testing**
+I conducted extensive manual testing as I was coding this project. I documented the testing in an A4 notepad and have transcribed it here by date for reference.
+
+<details>
+<summary>10/9/20</summary>
+After setting up my Gitpod workspace, I created app.py and base.html files and pushed to GitHub to ensure changes were committing successfully. No issues.
+</details>
+<details>
+<summary>17/9/20</summary>
+I setup a basic Flask app, requirements.txt and Procfile. I was able to successfully run the app with Python via the Terminal.
+I then created a Heroku app on the Heroku website and linked it to my GitHub repository. I was able to successfuly view my app in the browser.
+</details>
+<details>
+<summary>18/9/20</summary>
+An error in my code prevented my Flask app from running. After careful examination this turned out to be a syntax error in my app.py file which was easily fixed.
+</details>
+<details>
+<summary>22/9/20</summary>
+The app is taking shape now and my basic pages are setup. It took some time to get them to connect and write to the MongoDB Atlas database. Again I had some syntax errors that I could fix no problem. Tested successfully writing and editing an entry to the database. No issues.
+</details>
+<details>
+<summary>23/9/20</summary>
+Setup all pagelinks and interconnectivity. Thoroughly tested in the browser to ensure all navigation worked as expected. Delete functionality was not clearing all entries from MongoDB Atlas database. There was a problem with my routing that I had to consult the Code Institute tutor support team on. I recoded this successfully and it is now working fine.
+<br> Created an env.py file to hide my MongoDB password. Setup GitIgnore file to ensure it does not get pushed to my repository. Also created the key on Heroku in the Config Vars section. Tested once complete and app works as expected on localhost but not on Heroku. Fixed by relinking my Github repository on the Heroku website. env.py file is not being pushed to Git repository.
+</details>
+<details>
+<summary>24/9/20</summary>
+<br> Made large amounts of code and style changes today. Ran into some issues with my app/database relationship but was able to resolve without need for tutor support. I regularly checked localhost to ensure expected behaviour and made good use of Chrome Developer Tools to help solve positioning problems. At end of day checked Heroku app and all working as expected.
+</details>
+<details>
+<summary>25/9/20</summary>
+<br> Much the same as yesterday, large amount of code and CSS changes today. Any issues were resolved without much problem. Checked all code in validators to ensure I wasn't missing anything. Some stray tags detected which I removed and my Jinga code is showing as an error in the HTML validator but as far as I know this is normal.
+</details>
+<details>
+<summary>26/9/20</summary>
+<br> Happy with core code so today thoroughly checked all functionality several times and all links and buttons several times. No issues.
+</details>
+<details>
+<summary>28/9/20</summary>
+Bug detected when viewing the app on mobile device running Chrome for Android. The Navbar logo is popping out of the navbar into the body element. Was several hours trying to resolve myself and with Code Institute Tutors. This unfortuantely is unresolved. See 'Known Bugs' section below for further details.
+</details>
+<details>
+<summary>29/9/20</summary>
+One final pass of code through validators and thorough testing of all app functionality before submission. No issues apart from known display issue caught yesterday.
+</details>
+
+## **Known Bugs**
+When testing the app on my own mobile device I encountered a display issue with the logo in the navbar. It is partially popping out into the body element. I tried to resolve this using CSS media queries. If the app is viewed and resized in Chrome Developer Tools it can be observed that the media queries work and the issue is fixed. However despite saving and commitiing the changes to GitHub and Heroku, the issue is still observable on the mobile device.
+<br> I was several hours online with the Code Institute tutors trying to resolve this. Four different tutors looked at the issue with me but a resolution was not found. The most likely cause is a bug with Materialize itself when interacting with Chrome. I was told by the tutors to log it as a bug in my documentation and explain it for the assessor.
+
+<details><summary>Bug Screenshot</summary>
+
+![bugscreenshot](https://user-images.githubusercontent.com/48594804/94626660-73cabc80-02b3-11eb-914d-2489dc597e77.PNG)
+</details>
 
 
-## Features Left to Implement
+# **Technologies Used**
 
-* I would have loved to spend more time on this project. I will definitely be returning to it once I have completed the course as I believe it has strong potential to be a going concern. Unfortunately I am up against the clock now in terms of my finish date so need to move on.
-The CSS in general could be slicker. I will look into overhauling that.
-* I would like to recode the javascript to connect to more APIs from established sites. That will require monetary investment but is something I would like to do once I am employed again.
+## **Materialize** - https://materializecss.com/
+Materialize was used as the Framework for the app and I incorporated many of its features, as detailed above. I really enjoyed getting to know it and it was a nice change from Bootstrap which I used for my 2 previous Milestone Projects.
 
+## **HTML5** - https://www.w3.org/TR/html52/
+HTML5 was used for the general structuring and positioning on the app.
 
-# Technologies Used
-
-## HTML5 - https://www.w3.org/TR/html52/
-HTML5 was used for the general structuring and positioning on the website.
-
-## CSS3 - https://www.w3.org/Style/CSS/Overview.en.html
+## **CSS3** - https://www.w3.org/Style/CSS/Overview.en.html
 CSS3 was used to style the website.
 
-## JQuery - https://jquery.com/
-JQuery was used to deploy javascript functionality with bootstrap/bootswatch.
+## **Python3** - https://www.python.org/
+Python was used to run the application.
 
-## Javascript - https://www.javascript.com/
-Javascript was used to access the API and manipulate the results, based on search info inputted by the user.
+## **Javascript** - https://www.javascript.com/
+Javascript is used in conjunction with the Materialize framework to operate the forms and data entry functionality.
 
-## Font Awesome - https://www.bootstrapcdn.com/fontawesome/
-Font Awesome V4.7.0 icons were used for the Social Media links in the footer.
+## **JQuery** - https://jquery.com/
+JQuery was used to deploy javascript functionality with Materialize.
 
-## Git, Gitpod & Github - https://github.com/
-Gitpod was used as the development environment. Git was used to push my work from my local repository to my Github repository. Github hosts the project repository for others to see and the final deployed version of the website.
+## **Flask** - https://flask.palletsprojects.com/en/1.1.x/
+Flask was used to dynamically generate pages, links and other content within the app.
 
-# Testing
+## **MongoDB Atlas** - https://www.mongodb.com/
+MongoDB was used as the database to read, write, edit and delete data from the app interface.
 
-## Manual Testing
-Based on feedback from My Milestone one project, this time around I documented my testing in a word document. This is available to view in the assets folder of this project or can be downloaded directly at: https://c28e0d1a-181e-43e6-a8c0-f2acb6318d5f.ws-us02.gitpod.io/files/download/?id=84ab1048-22ab-45a8-91e9-ca88f2e8cd78 
+## **Pymongo** - https://pypi.org/project/pymongo/
+Pymongo was used to handle the interaction between Python and MongoDB.
 
-You will see a long gap in testing dates between July and September, this is due to my emigrating from Ireland which interrupted development on the project. In addition to the word doc, similar to my milestone one project, as I was building this project I was ensuring to test the functionality of pagelinks, external links, navigation, features and elements as I was proceeding. At the end of every session I not only checked any new features I had added, but also all my existing features to ensure any changes I had made had not adversely affected other existing features.
+## **Jinja** - https://jinja.palletsprojects.com/en/2.11.x/
+Jinja was used as a templating language for Python. I really enjoyed learning this and found it incredibly useful.
 
-All code was checked with the following validator: https://validator.w3.org/
+## **Balsamiq** - https://balsamiq.com/wireframes/
+Balsamiq was used to create my wireframes at the start of this project.
 
-## Responsiveness Testing with Chrome DevTools
-All website pages have been extensively tested for mobile-first responsiveness using Chrome DevTools. I personally checked responsiveness on the following devices:
-* Android 10 phone
-* Android 10 tablet 
-* Windows 10 laptop
-* Windows 10 desktop
+## **Heroku** - https://www.heroku.com/
+Heroku was used to host the final deployed version of the app.
 
-Some colleagues were asked to check responsiveness on:
-* iPad - iPadOS 13.5
-* iPhone - iOS 13.5
-* iMac - MacOS 10.15
+## **Git, GitPod & GitHub** - https://github.com/
+Gitpod was used as the development environment. Git and Github were used for version control. My repository was linked to my Heroku app for synchronised commit pushes.
 
-# Deployment
- I started this project by using the Code Institute template available on Github at: https://github.com/Code-Institute-Org/gitpod-full-template. As I was building the project I was regularly saving my work using the Git Add functionality and tracking my changes with descriptive messages using the Git Commit functionality. I used Git Push to send to the remote repository. I was able to pick up exactly where I left off by clicking on the Gitpod button to access my workspace on the remote repository. When the project was finished I accessed the settings menu and activated GitHub Pages.
- 
- Other users can clone the project by entering the following command in their terminal: Git Clone https://github.com/menacethedenis/CI-milestone-two.git
- 
- The finished website is deployed and can be viewed via Github pages:
- https://menacethedenis.github.io/CI-milestone-two/
+## **HTML validator** - https://validator.w3.org/ 
+This was used to ensure the code on my HTML pages were error free.
 
-# Credits
-## Content
+## **CSS validator** - https://jigsaw.w3.org/css-validator/
+This was used to ensure my CSS stylesheet was error free.
 
-As the API functionality I wanted to use in this project was not covered in the Code Institute tutorials, I had to do a great deal of external research and learning over the course of this project. Some of the sites I found very helpful in general were:
-https://rapidapi.com/blog/how-to-use-an-api-with-javascript/
-https://www.youtube.com/watch?v=YsPqjYGauns
-https://www.youtube.com/user/TechGuyWeb
-https://www.youtube.com/user/shiffman
-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction
+## **CSS Autoprefixer** - https://autoprefixer.github.io/
+This was used to check for webkit styles when attempting to rectify a known bug.
 
-For the Javascipt functionality I relied heavily on Github and Stack Overflow threads for more detailed understanding. I repurposed or reused some code snippets from some of the following:
+# **Deployment**
+ This project was fully developed in [GitPod](https://www.gitpod.io/). To start off I used the [Code Institute template](https://github.com/Code-Institute-Org/gitpod-full-template) available on [GitHub](https://github.com/). 
+ As I was building the project I regularly committed my code to my [GitHub Repository](https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer) by pushing it from my local Git repository via command prompts from the GitPod terminal.
+ <br>
 
-https://stackoverflow.com/questions/957537/how-can-i-display-a-javascript-object/4293047#4293047
-https://stackoverflow.com/questions/1625208/print-content-of-javascript-object?noredirect=1&lq=1
-https://stackoverflow.com/questions/1966503/does-imdb-provide-an-api
-https://github.com/algolia/algoliasearch-client-javascript
-https://github.com/EmmaSemutenga/movieInfo/blob/master/js/main.js
-https://github.com/bvaughn/js-worker-search
-https://github.com/FriesFlorian/viralvideos
-https://github.com/anshulrgoyal/imdb-scrapper
+ The app is deployed on [Heroku](https://beer-tracker-ci-ms3.herokuapp.com/). This was connected directly to my [GitHub Repository](https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer) to allow synchronised pushes of any commits I made.
 
-The free API database I used was The Movie Database (TMDB):
+## **Heroku Deployment**
+Deployment to [Heroku](https://beer-tracker-ci-ms3.herokuapp.com/) from the [GitHub Repository](https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer) was completed using the following steps:
+1. In the browser, navigate to the [Heroku dashboard](https://dashboard.heroku.com/) and login with username and password.
+2. 
 
-https://developers.themoviedb.org/3/movies/get-movie-credits
+## **Local Deployment**
 
-I also linked search results to the more established and well-known review site ImDB:
 
-https://www.imdb.com/
+# **Credits**
+## **Content**
 
-## Acknowledgements
-I would like to thank the tutors at the Code Institute and my mentor Spencer Barriball for their outstanding support, advice and encouragement. Neil Kavanagh who graded my Milestone One project also gave me some excellent and useful feedback.
+This app is based heavily on the lessons from the Code Institute Data Centric Development Module. I also referenced several threads on Stack Overflow when I was trying to resolve some issues but I did not use anyone elses code. 
+
+<br>The Code Institute tutors were also very helpful in assisting some bug resolution, particularly the known display bug detailed above.
+
+<br>Before starting this project I had a look at some other students projects that had been posted on the Code Institute Slack channels, to get a feel for what others were doing and to hopefully ensure my idea hadn't already been taken. This was purely research, I did not use any other student's code.
+
+<br>The image used in the footer was sourced via google images and is open-source.
+
+## **Acknowledgements**
+I would like to thank the tutors at the Code Institute and my mentor Spencer Barriball for their outstanding support, patience, advice and encouragement.
+<br>
 
 Thanks also to the Code Institute student care team for keeping me on track, checking in and always being so understanding, empathetic and helpful.

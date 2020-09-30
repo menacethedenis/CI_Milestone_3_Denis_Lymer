@@ -349,10 +349,36 @@ This was used to check for webkit styles when attempting to rectify a known bug.
 ## **Heroku Deployment**
 Deployment to [Heroku](https://beer-tracker-ci-ms3.herokuapp.com/) from the [GitHub Repository](https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer) was completed using the following steps:
 1. In the browser, navigate to the [Heroku dashboard](https://dashboard.heroku.com/) and login with username and password.
-2. 
+2. Click the **New** button on the top right of the dashboard and select **Create New App** from the dropdown menu.
+3. Enter a name for the app, this must be unique, the autoprompt will guide you. Then select the most relevant region for you and click the **Create App** button.
+4. The app will now be created and will open on the **Deploy** tab. Under the  **Deployment Method** select **GitHub**.
+5. Login using GitHub username and password and select the relevant Repository in the search box. Once found, click **Connect** and under **Manual Deploy** select the relevant branch and click **Deploy Branch**. The app will now deploy based on the latest commit pushed to the Repository.
+6. Click the **Settings** tab, scroll down to the **Config Vars** section and click the **Reveal Config Vars** button.
+7. Click the Add button and create key:value pairs for IP, PORT and any URIs or Secret Keys required by your project.
+8. Scroll back to the top of the page, click the **More** button and select **Restart all dynos**.
+9. Finally, scroll down to the **Domains** section and click the link to your app to open the deployed app in the browser. 
 
 ## **Local Deployment**
+The Technologies used in this project are listed above. To deploy locally you will need the following minimum requirements:
+*Local or browser based development environment.
+*Git - local and online GitHub repository.
+*Python and Flask installed in your development environment.
+*MongoDB Atlas - account, cluster and collection.
 
+1. Navigate to this projects [GitHub Repository](https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer), click the green **Clone or download** button and copy the clone URL.
+2. In the terminal of your development environment, navigate to or create the folder you would like to clone the repository files into.
+3. Use the **git clone** command combined with the clone URL and press enter to clone the files to your selected folder.
+```
+git clone https://github.com/menacethedenis/CI_Milestone_3_Denis_Lymer
+```
+4. In the terminal install the required modules using the pip3 install command.
+```
+pip3 install -r requirements.txt
+```
+5. Once the terminal has confirmed all installs have been successful run the app on an Open Port with the following command.
+```
+python3 app.py
+```
 
 # **Credits**
 ## **Content**
